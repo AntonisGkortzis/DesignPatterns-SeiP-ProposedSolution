@@ -9,8 +9,5 @@ branches:
   - development
 
 script: 
-  - mvn clean install jacoco:report coveralls:report
-
-after_success:
-  - mvn clean test jacoco:report coveralls:report
+  - mvn clean install jacoco:report
 
