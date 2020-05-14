@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - openjdk8
+
+branches:
+  only:
+  - master
+  - development
+
+script: 
+  - mvn clean install jacoco:report coveralls:report
+
+after_success:
+  - mvn clean test jacoco:report coveralls:report
+
