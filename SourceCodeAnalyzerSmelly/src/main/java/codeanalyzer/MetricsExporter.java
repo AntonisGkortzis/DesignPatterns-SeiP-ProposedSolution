@@ -47,6 +47,7 @@ public class MetricsExporter {
 	}
 	
 	private void writeJson(Map<String, Integer> metrics, String filepath) {
+		System.out.println("Functionality not implemented yet. ");
 		// Functionality not implemented yet
 		// No need to implement it for the assignment
 	}
