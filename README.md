@@ -1,6 +1,8 @@
-# SEiP - Proposed solution of the 4th Assingment on Design Patterns
+[![Build Status](https://travis-ci.com/AntonisGkortzis/DesignPatterns-SeiP-ProposedSolution.svg?token=G9zDqfcXKyqNsWnKiyZr&branch=master)](https://travis-ci.com/AntonisGkortzis/DesignPatterns-SeiP-ProposedSolution)
 
-# Introduction 
+# Proposed solution of the 4th SEiP Assingment on Design Patterns
+
+## Introduction 
 The purpose of this assignment is to refactor a purposfully badly written code base of a system that calculates metrics of a given Java source code file. The main functionalities of the system are: 
 - __Read a Java source code file__: Read a Java source code file that is stored 1) locally or 2) on the web. 
 - __Calculate metrics__: Analyze the source code with and retrieve metrics by selecting one of 2 types of analysis, namely, 1) Regular expression and 2) String comparison. 
@@ -11,6 +13,7 @@ Build the modules:
 ```
 mvn package
 ```
+
 ## 1. A "Smelly" source code analyzer
 [Smelly Source Code Analyzer](./SourceCodeAnalyzerSmelly), the purposefully badly written Maven module. 
 Execute the module as follows:
