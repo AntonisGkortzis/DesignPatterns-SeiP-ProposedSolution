@@ -1,7 +1,4 @@
-/**
- * 
- */
-package sourcecodeanalyzerrefactored.metricswriters;
+package sourcecodeanalyzerrefactored.metricswriter;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -9,10 +6,11 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
+ * Format a list of metrics into a valid CSV format and exports it to a file
+ * 
  * @author agkortzis
- *
  */
-public class CVSExporter implements MetricsExporter {
+public class CSVExporter implements MetricsExporter {
 
 	@Override
 	public void writeToFile(String filePath, Map<String, Integer> metrics) {

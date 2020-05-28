@@ -1,11 +1,13 @@
 /**
  * 
  */
-package sourcecodeanalyzerrefactored.contentreaders;
+package sourcecodeanalyzerrefactored.contentreader;
 
 import java.util.List;
 
 /**
+ * Defines the "Nothing" for any undefined type of ContentReader.
+ * 
  * @author agkortzis
  *
  */

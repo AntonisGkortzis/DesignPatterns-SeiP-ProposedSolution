@@ -1,7 +1,4 @@
-/**
- * 
- */
-package sourcecodeanalyzerrefactored.contentreaders;
+package sourcecodeanalyzerrefactored.contentreader;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,6 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Reads file stored on the web and returns its content as a single String or
+ * a list of Strings depending on the requirements.
+ * 
  * @author agkortzis
  *
  */

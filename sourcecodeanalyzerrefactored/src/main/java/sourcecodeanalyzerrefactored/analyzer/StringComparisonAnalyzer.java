@@ -1,8 +1,15 @@
-package sourcecodeanalyzerrefactored.analyzers;
+package sourcecodeanalyzerrefactored.analyzer;
 
 import java.io.IOException;
-import java.util.List;
 
+import java.util.List;
+/**
+ * This class implements the calculation of source code metrics through means of
+ * String Comparison.
+ * 
+ * @author agkortzis
+ *
+ */
 public class StringComparisonAnalyzer extends SourceCodeAnalyzer {
 
 	@Override

@@ -1,11 +1,10 @@
-/**
- * 
- */
-package sourcecodeanalyzerrefactored.metricswriters;
+package sourcecodeanalyzerrefactored.metricswriter;
 
 import java.util.Map;
 
 /**
+ * This class defines the "Nothing" for any undefined type of MetricsExporter.
+ * 
  * @author agkortzis
  *
  */

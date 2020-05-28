@@ -1,4 +1,4 @@
-package sourcecodeanalyzerrefactored.contentreaders;
+package sourcecodeanalyzerrefactored.contentreader;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,7 +6,13 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Reads a locally stored file and returns its content as a single String or
+ * a list of Strings depending on the requirements.
+ * 
+ * @author agkortzis
+ *
+ */
 public class LocalFileReader implements ContentReader {
 
 	@Override

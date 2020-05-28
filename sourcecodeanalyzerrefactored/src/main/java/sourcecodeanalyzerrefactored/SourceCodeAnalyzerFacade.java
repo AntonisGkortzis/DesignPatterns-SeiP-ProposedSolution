@@ -4,13 +4,20 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import sourcecodeanalyzerrefactored.analyzers.SourceCodeAnalyzer;
-import sourcecodeanalyzerrefactored.analyzers.SourceCodeAnalyzerFactory;
-import sourcecodeanalyzerrefactored.contentreaders.ContentReader;
-import sourcecodeanalyzerrefactored.contentreaders.ContentReaderFactory;
-import sourcecodeanalyzerrefactored.metricswriters.MetricsExporter;
-import sourcecodeanalyzerrefactored.metricswriters.MetricsExporterFactory;
+import sourcecodeanalyzerrefactored.analyzer.SourceCodeAnalyzer;
+import sourcecodeanalyzerrefactored.analyzer.SourceCodeAnalyzerFactory;
+import sourcecodeanalyzerrefactored.contentreader.ContentReader;
+import sourcecodeanalyzerrefactored.contentreader.ContentReaderFactory;
+import sourcecodeanalyzerrefactored.metricswriter.MetricsExporter;
+import sourcecodeanalyzerrefactored.metricswriter.MetricsExporterFactory;
 
+/**
+ * A class that behaves as an entry point for the rest of the system. Provides a single interface (entry-point)
+ * through which any Client can make use of the system's functionality without knowing the implementation
+ * details of it. 
+ * @author agkortzis
+ *
+ */
 public class SourceCodeAnalyzerFacade {
 	
 	public void performFileAnalysis(String filepath, String analysisType, String fileLocation, String outputFileName, String outputFileType) throws IOException {
@@ -25,7 +32,7 @@ public class SourceCodeAnalyzerFacade {
 		// ask the factory to create and return a concrete SourceCodeAnalyzer 
 		SourceCodeAnalyzer analyzer = analyzerFactory.createSourceCodeAnalyzer(analysisType);
 		// inject the content reader into the analyzer
-		analyzer.setSourceFileReader(contentReader);
+		analyzer.setContentReader(contentReader);
 		
 		// perform the analysis
 		int loc = analyzer.calculateLOC(filepath);

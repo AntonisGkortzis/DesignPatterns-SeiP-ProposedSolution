@@ -1,9 +1,16 @@
-package sourcecodeanalyzerrefactored.analyzers;
+package sourcecodeanalyzerrefactored.analyzer;
 
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * This class implements the calculation of source code metrics through means of
+ * Regular Expressions.
+ * 
+ * @author agkortzis
+ *
+ */
 public class RegexAnalyzer extends SourceCodeAnalyzer {
 
 	@Override

@@ -1,5 +1,11 @@
-package sourcecodeanalyzerrefactored.analyzers;
+package sourcecodeanalyzerrefactored.analyzer;
 
+/**
+ * This class is responsible for instantiating and returning 
+ * a concrete type of SourceCodeAnalazyer
+ * 
+ * @author agkortzis
+ */
 public class SourceCodeAnalyzerFactory {
 	
 	public SourceCodeAnalyzer createSourceCodeAnalyzer(String type) {
