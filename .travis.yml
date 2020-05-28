@@ -11,3 +11,6 @@ branches:
 script: 
   - mvn clean install jacoco:report
 
+after_script:
+  - java -jar sourcecodeanalyzerrefactored/target/sourcecodeanalyzerrefactored-0.0.1.jar sourcecodeanalyzerrefactored/src/test/resources/TestClass.java regex local actual_metrics csv
+  - diff actual_metrics.csv sourcecodeanalyzerrefactored/src/test/resources/expected_metrics.csv
