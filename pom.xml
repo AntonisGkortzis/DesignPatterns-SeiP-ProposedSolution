@@ -11,7 +11,7 @@
 	<description>This is a Maven container project for a source code analyzer project and its improved refactored approach.</description>
 
 	<modules>
-		<module>SourceCodeAnalyzerSmelly</module>
+		<module>sourcecodeanalyzersmelly</module>
 		<module>sourcecodeanalyzerrefactored</module>
 	</modules>
 

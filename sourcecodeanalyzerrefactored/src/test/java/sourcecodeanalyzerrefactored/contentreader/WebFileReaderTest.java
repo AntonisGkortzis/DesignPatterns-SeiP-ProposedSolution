@@ -39,7 +39,6 @@ public class WebFileReaderTest {
 
 		String[] expecteds = expectedList.stream().toArray(String[]::new);
 		String[] actuals = actualList.stream().toArray(String[]::new);
-
 		assertArrayEquals(expecteds, actuals);
 	}
 }
