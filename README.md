@@ -8,15 +8,10 @@ The purpose of this assignment is to refactor a purposfully badly written code b
 - __Calculate metrics__: Analyze the source code with and retrieve metrics by selecting one of 2 types of analysis, namely, 1) Regular expression and 2) String comparison. 
 - __Export Metrics__: Write the metrics in a file of type 1) CSV or 2) JSON. 
 
-The aforementioned functionalities are implemented in two different modules. 
-Build the modules: 
-```
-mvn package
-```
+The aforementioned functionalities are implemented in two different modules 1) the Smelly Code Analyzer and 2) the Refactored Code Analyzer. 
 
 ## 1. A "Smelly" source code analyzer
 [Smelly Source Code Analyzer](./SourceCodeAnalyzerSmelly), the purposefully badly written Maven module. 
-Execute the module as follows:
 
 ## 2. The Refactored source code analyzer
 [Refactored Source Code Analyzer](./sourcecodeanalyzerrefactored), the refactored version of the 1st System that follows the SOLID oop design principles with the use of several Design patterns. 

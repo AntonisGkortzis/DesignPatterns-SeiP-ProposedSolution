@@ -1,12 +1,18 @@
 # A "Smelly" source code analyzer
-// TODO: Intro
+This module presents a deliberately badly implemented source code analyzer. The code base suffers from
+- Code duplication
+- Long and complex methods
+- High coupling between the Client and the System
+- High coupling between classes (classes directly use other concrete classes rather than their interfaces)
 
 ## Module design
 The follwoing class diagram visualizes the classes and relatioships of the "smelly" source code analyzer. 
 ![](smelly_class_diagram.png)
 
-## Execute the module
+## Build and execute the module
 ```
+mvn clean package jacoco:report
+
 java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
 
   arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)

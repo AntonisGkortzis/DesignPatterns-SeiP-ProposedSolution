@@ -4,7 +4,7 @@ This is the refatcored version of the Source Code Analyzer system. The follwoing
 ## Module design
 The following class diagram visualizes the refactored source code analyzer. The red doted rectangles represent ```packages``` that group classes that handle similar concepts. For example ```analyzer``` package consists of the _Analyzer_ interface ```SourceCodeAnalyzer```, its implementations (```RegexAnalyzer, StringComparisonAnalyzer, NullAnalyzer```) and the class responsible for creating the implementations (```SourceCodeAnalyzerFactory```). 
 _Note that some methods (e.g., getters and setters) are not included in the class diargam_
-![](assignement_solution.png)
+![](assignement_solution_cd.png)
 
 ### Design Desicions
 All design decisions that led to the current design were taken to satisfy the follwoing requirements: 
