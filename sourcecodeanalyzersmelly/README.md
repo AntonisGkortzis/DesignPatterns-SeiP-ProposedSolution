@@ -9,10 +9,13 @@ This module presents a deliberately badly implemented source code analyzer. The 
 The follwoing class diagram visualizes the classes and relatioships of the "smelly" source code analyzer. 
 ![](smelly_class_diagram.png)
 
-## Build and execute the module
+## Build the module and the coverage report
 ```
 mvn clean package jacoco:report
+```
 
+## Execute the module
+```
 java –jar “jar-with-dependencies” arg0 arg1 arg2 arg3 arg4
 
   arg0 = “JavaSourceCodeInputFile” (e.g., src/test/resources/TestClass.java)
