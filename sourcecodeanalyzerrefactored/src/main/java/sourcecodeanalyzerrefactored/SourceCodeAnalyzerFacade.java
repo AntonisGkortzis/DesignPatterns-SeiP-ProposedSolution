@@ -20,15 +20,32 @@ import sourcecodeanalyzerrefactored.metricswriter.MetricsExporterFactory;
  */
 public class SourceCodeAnalyzerFacade {
 	
+	private ContentReaderFactory readerFactory;
+	private SourceCodeAnalyzerFactory analyzerFactory;
+	private MetricsExporterFactory exporterFactory;
+	
+	public SourceCodeAnalyzerFacade() {
+		readerFactory = new ContentReaderFactory();
+		analyzerFactory = new SourceCodeAnalyzerFactory();
+		exporterFactory = new MetricsExporterFactory();
+	}
+	
+	/*
+	 * This Constructor exists only for enabling this class to be tested with unit-tests.
+	 * Inject dependencies with mocks that have predefine behavior
+	 */
+	public SourceCodeAnalyzerFacade(ContentReaderFactory readerFactory, SourceCodeAnalyzerFactory analyzerFactory,
+			MetricsExporterFactory exporterFactory) {
+		this.readerFactory = readerFactory;
+		this.analyzerFactory = analyzerFactory;
+		this.exporterFactory = exporterFactory;
+	}
+
 	public void performFileAnalysis(String filepath, String analysisType, String fileLocation, String outputFileName, String outputFileType) throws IOException {
-		
-		// create a factory that is responsible for creating a concrete ContentReader
-		ContentReaderFactory readerFactory = new ContentReaderFactory();
+
 		// ask the factory to create and return a concrete ContentReader
 		ContentReader contentReader = readerFactory.createContentReader(fileLocation);
 		
-		// create a factory that is responsible for creating a concrete SourceCodeAnalyzer
-		SourceCodeAnalyzerFactory analyzerFactory = new SourceCodeAnalyzerFactory();
 		// ask the factory to create and return a concrete SourceCodeAnalyzer 
 		SourceCodeAnalyzer analyzer = analyzerFactory.createSourceCodeAnalyzer(analysisType);
 		// inject the content reader into the analyzer
@@ -45,8 +62,6 @@ public class SourceCodeAnalyzerFacade {
 		metrics.put("nom", nom);
 		metrics.put("noc", noc);
 		
-		// create a factory that is responsible for creating a concrete MetricsExporter
-		MetricsExporterFactory exporterFactory = new MetricsExporterFactory();
 		// ask the factory to create and return a concrete MetricsExporter
 		MetricsExporter metricsExporter = exporterFactory.createMetricsExporter(outputFileType);
 		
